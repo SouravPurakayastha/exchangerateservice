@@ -1,0 +1,12 @@
+services:
+  exchange-rate-service:
+    container_name: exchange-rate-service
+    build: .
+    image: exchange-rate-service:latest
+    ports:
+      - 8081:8080
+    networks:
+      - demo-network
+networks:
+  demo-network:
+    driver: bridge
